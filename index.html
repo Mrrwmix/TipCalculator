@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <title>Tip Calculator</title>
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row bg-light">
+            <div class="col-md-12 text-center">
+                <h1>Tip Calculator</h1>
+            </div>
+        </div>
+        <div class="row bg-dark text-white py-2">
+            <div class="col-md-12 input-group d-flex flex-column text-center">
+                <form>
+                    <div class="form-group">
+                        <label>Bill total</label>
+                        <input type="number" class="form-control text-center" placeholder="Amount" id="amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tip percentage</label>
+                        <input type="number" class="form-control text-center" placeholder="%" id="percent" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of people to split the tip with (Optional)</label>
+                        <input type="number" class="form-control text-center" placeholder="Split" id="split">
+                    </div>
+                    <button class="btn btn-primary btn-block" id="calculate">Calculate</button>
+                    <button class="btn btn-danger btn-block" id="clear">Clear</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center p-0 d-flex justify-content-center">
+                <div class="row">
+                    <h2 class="col-md-12 py-3">Tip Amount</h2>
+                    <p class="col-md-12 bg-warning text-dark border rounded-pill" id="tipDisplay"
+                        style="font-size: 3.5rem"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="assets/js/calculations.js"></script>
+
+</html>
