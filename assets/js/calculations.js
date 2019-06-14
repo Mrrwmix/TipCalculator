@@ -4,8 +4,8 @@ class Tip {
     constructor(_total, _percent, _split = 1) {
         this.total = _total;
         this.percent = _percent;
-        //If there's no split value given, it will default to 1
-        if (_split !== '') {
+        //If there's no split value given or if it is 0, it will default to 1 to avoid dividing by 0
+        if (_split !== '' && _split != 0) {
             this.split = _split;
         }
         else {
