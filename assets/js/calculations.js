@@ -14,7 +14,21 @@ class Tip {
     }
     // Calculates the tip and returns a value rounded up to the hundredths place
     get tipAmount() {
-        return (this.percent * 0.01 * this.total / this.split).toFixed(2);
+        return (Math.ceil((this.percent * 0.01 * this.total / this.split)*100)/100).toFixed(2);
+    }
+}
+
+// Disabling negative numbers
+onload = function () {
+    for (var i = 0; i < 3; i++) {
+        var ele = document.querySelectorAll('.number-only')[i];
+        ele.onkeypress = function (e) {
+            if (isNaN(this.value + "" + String.fromCharCode(e.charCode)))
+                return false;
+        }
+        ele.onpaste = function (e) {
+            e.preventDefault();
+        }
     }
 }
 
@@ -36,7 +50,7 @@ document.getElementById("calculate").onclick = function () {
 This could have been done with the calculate button, but I wanted the user to be able to adjust
 numbers as needed
 */
-document.getElementById("clear").onclick = function() {
+document.getElementById("clear").onclick = function () {
     event.preventDefault();
     document.getElementById('amount').value = '';
     document.getElementById('percent').value = '';

@@ -27,15 +27,15 @@
                 <form>
                     <div class="form-group">
                         <label>Bill total</label>
-                        <input type="number" class="form-control text-center" placeholder="Amount" id="amount" required>
+                        <input type="number" class="form-control text-center number-only" placeholder="Amount" id="amount" required>
                     </div>
                     <div class="form-group">
                         <label>Tip percentage</label>
-                        <input type="number" min="1" class="form-control text-center" placeholder="%" id="percent" required>
+                        <input type="number" min="1" class="form-control text-center number-only" placeholder="%" id="percent" required>
                     </div>
                     <div class="form-group">
                         <label>Number of people to split the tip with <b>(Optional)</b></label>
-                        <input type="number" min="1" class="form-control text-center" placeholder="Split" id="split">
+                        <input type="number" min="1" class="form-control text-center number-only" placeholder="Split" id="split">
                     </div>
                     <button class="btn btn-primary btn-block" id="calculate">Calculate</button>
                     <button class="btn btn-danger btn-block" id="clear">Clear</button>
